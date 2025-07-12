@@ -4,7 +4,7 @@ A modern, high-performance pizza shop website built with Next.js 15, featuring i
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-deployment-url.com)
+[View Live Demo](https://pizza-shop-rakeshkumarsahugithubs-projects.vercel.app)
 
 ## 📋 Table of Contents
 
@@ -15,8 +15,6 @@ A modern, high-performance pizza shop website built with Next.js 15, featuring i
 - [Performance Optimizations](#-performance-optimizations)
 - [Rendering Strategies](#-rendering-strategies)
 - [Installation & Setup](#-installation--setup)
-- [Development](#-development)
-- [Deployment](#-deployment)
 - [Performance Metrics](#-performance-metrics)
 
 ## ✨ Features
@@ -276,8 +274,7 @@ This project uses a **hybrid rendering approach** combining multiple strategies 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/pizza-shop-design.git
-cd pizza-shop-design
+git clone https://github.com/Rakeshkumarsahugithub/pizza.shop.git
 ```
 
 2. **Install dependencies**
@@ -329,32 +326,6 @@ npm run lint
 | **Source Maps** | ✅ Enabled | ❌ Disabled |
 | **Error Overlay** | ✅ Enabled | ❌ Disabled |
 
-## 📦 Deployment
-
-### **Production Build**
-```bash
-npm run build
-```
-
-### **Deployment Options**
-
-#### **Vercel (Recommended)**
-```bash
-npm install -g vercel
-vercel
-```
-
-#### **Netlify**
-```bash
-npm run build
-# Deploy dist/ folder to Netlify
-```
-
-#### **Traditional Hosting**
-```bash
-npm run build
-npm run start
-```
 
 ## 📊 Performance Metrics
 
@@ -393,7 +364,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Rakesh's Pizza Shop**
-- Website: [Your Website]
+- Website: https://pizza-shop-sooty-phi.vercel.app
+
 - Email: sahurks1234@gmail.com
 - Phone: +91-9777718050
 
