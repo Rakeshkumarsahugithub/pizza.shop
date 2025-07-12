@@ -2,9 +2,10 @@
 
 A modern, high-performance pizza shop website built with Next.js 15, featuring interactive components, optimized routing, and a beautiful user interface.
 
-## 🚀 Live Demo
+## 🚀 Live Demo of Private/Public Repo This Project
 
-[View Live Demo](https://pizza-shop-rakeshkumarsahugithubs-projects.vercel.app)
+- [View Private Repo Live Demo](https://rkpizza.vercel.app)
+- [View Public Repo Live Demo](https://pizza-shop-rakeshkumarsahugithubs-projects.vercel.app)
 
 ## 📋 Table of Contents
 
@@ -365,6 +366,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Rakesh's Pizza Shop**
 - Website: https://pizza-shop-sooty-phi.vercel.app
+- Website: https://rkpizza.vercel.app
 
 - Email: sahurks1234@gmail.com
 - Phone: +91-9777718050
