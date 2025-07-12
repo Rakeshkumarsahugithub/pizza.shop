@@ -19,7 +19,7 @@ export default function Contact() {
             Get In Touch
           </h1>
           <p className="text-gray-600 text-lg md:text-xl max-w-md mx-auto">
-            Ready to order delicious pizza? We'd love to hear from you!
+            Ready to order delicious pizza? We&apos;d love to hear from you!
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function Contact() {
               <div className="flex-1">
                 <h3 className="text-lg font-semibold text-gray-800 mb-1">Email Us</h3>
                 <p className="text-green-600 font-bold text-lg md:text-xl break-all">sahurks1234@gmail.com</p>
-                <p className="text-gray-500 text-sm">We'll respond within 2 hours</p>
+                <p className="text-gray-500 text-sm">We&apos;ll respond within 2 hours</p>
               </div>
             </div>
           </div>
