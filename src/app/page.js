@@ -3,13 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import Image from 'next/image';
 
 const images = [
-  "https://b.zmtcdn.com/data/pictures/chains/3/18687613/7b4ce7f12a029437bc789052ab310aa0.jpg",
-  
+  "/5954982.jpg",
+  "/4909126.jpg",
   "/istockphoto-1189363940-1024x1024.jpg",
-  "https://png.pngtree.com/png-clipart/20210711/original/pngtree-dark-creative-pizza-promotional-banner-template-png-image_6510570.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg",
+  "/Food-Web-Banner-10.jpg",
+  "/delicious-pizza-black-wooden-table-italian-food-top-view.jpg",
   "/istockphoto-1144383005-1024x1024.jpg",
-  "https://www.dominos.co.in/theme2/front/assets/banner2.webp",
+  "/22868.jpg"
 ];
 
 export default function Home() {
