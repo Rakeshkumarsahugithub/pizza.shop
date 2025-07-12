@@ -1,103 +1,229 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect, useRef } from "react";
+
+const images = [
+  "https://b.zmtcdn.com/data/pictures/chains/3/18687613/7b4ce7f12a029437bc789052ab310aa0.jpg",
+  
+  "/istockphoto-1189363940-1024x1024.jpg",
+  "https://png.pngtree.com/png-clipart/20210711/original/pngtree-dark-creative-pizza-promotional-banner-template-png-image_6510570.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg",
+  "/istockphoto-1144383005-1024x1024.jpg",
+  "https://www.dominos.co.in/theme2/front/assets/banner2.webp",
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef(null);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  const nextImage = () => setCurrent((prev) => (prev + 1) % images.length);
+  const prevImage = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
+
+  useEffect(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(nextImage, 4000);
+    return () => clearTimeout(timeoutRef.current);
+  }, [current]);
+
+  return (
+    <div style={{
+      minHeight: "100vh",
+      background: "linear-gradient(135deg, #fff6f6 0%, #f3e7ff 100%)",
+      margin: 0,
+      padding: 0,
+      boxSizing: "border-box",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "flex-start",
+    }}>
+      {/* Heading and description */}
+      <div style={{
+        width: "100%",
+        maxWidth: 1200,
+        margin: "0 auto 1.5rem auto",
+        textAlign: "center",
+        zIndex: 20,
+      }}>
+        <h1 style={{
+          fontSize: "2.5rem",
+          fontWeight: 800,
+          color: "#d100b6",
+          margin: 0,
+          letterSpacing: 1,
+        }}>
+          Welcome to Rakesh’s Pizza Shop!
+        </h1>
+        <p style={{
+          fontSize: "1.25rem",
+          color: "#333",
+          margin: "1rem 0 0 0",
+          fontWeight: 500,
+        }}>
+          Enjoy our delicious pizzas and fast food specials. Scroll through our featured menu!
+        </p>
+      </div>
+      {/* Carousel container */}
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          maxWidth: 1100,
+          height: "60vh",
+          minHeight: 350,
+          margin: "0 auto 2rem auto",
+          borderRadius: 40,
+          boxShadow: "0 8px 32px 0 rgba(209,0,182,0.18), 0 1.5px 8px #d100b622, 0 2px 16px #0001",
+          overflow: "hidden",
+          background: "linear-gradient(120deg,rgba(169, 148, 161, 0.85) 60%,rgba(209,0,182,0.08) 100%)",
+          border: "2.5px solid rgba(255,255,255,0.45)",
+          backdropFilter: "blur(8px)",
+          WebkitBackdropFilter: "blur(8px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "1.5rem 1.5rem 2.5rem 1.5rem",
+          transition: "box-shadow 0.3s, transform 0.3s",
+        }}
+        onMouseOver={e => e.currentTarget.style.boxShadow = "0 16px 48px 0 rgba(209,0,182,0.22), 0 2px 16px #d100b655"}
+        onMouseOut={e => e.currentTarget.style.boxShadow = "0 8px 32px 0 rgba(209,0,182,0.18), 0 1.5px 8px #d100b622, 0 2px 16px #0001"}
+      >
+        {/* Glassmorphism overlay */}
+        <div style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: "rgba(255,255,255,0.18)",
+          zIndex: 1,
+          pointerEvents: "none",
+        }} />
+        {/* Carousel images */}
+        {images.map((img, idx) => (
+          <div key={img} style={{
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            opacity: idx === current ? 1 : 0,
+            transition: "opacity 0.7s cubic-bezier(.4,0,.2,1)",
+            zIndex: idx === current ? 2 : 1,
+          }}>
+            <img
+              src={img}
+              alt={`carousel-img-${idx}`}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+                borderRadius: 32,
+                filter: "brightness(1)",
+              }}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Overlay for contrast */}
+            {/* <div style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              background: "linear-gradient(90deg,rgba(255,255,255,0.12) 0%,rgba(0,0,0,0.18) 100%)",
+              borderRadius: 32,
+              zIndex: 3,
+            }} /> */}
+          </div>
+        ))}
+        {/* Left Arrow */}
+        <button
+          onClick={prevImage}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: 24,
+            transform: "translateY(-50%)",
+            background: "linear-gradient(135deg, #fff6f6 0%, #d100b6 100%)",
+            border: "none",
+            borderRadius: "50%",
+            width: 60,
+            height: 60,
+            color: "#fff",
+            fontSize: 36,
+            fontWeight: 900,
+            cursor: "pointer",
+            zIndex: 10,
+            boxShadow: "0 4px 16px #d100b655, 0 1.5px 8px #d100b622",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+          }}
+          aria-label="Previous image"
+          onMouseOver={e => e.currentTarget.style.transform = "scale(1.12)"}
+          onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}
+        >
+          <span style={{fontSize: 40, fontWeight: 900, lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>&#x2039;</span>
+        </button>
+        {/* Right Arrow */}
+        <button
+          onClick={nextImage}
+          style={{
+            position: "absolute",
+            top: "50%",
+            right: 24,
+            transform: "translateY(-50%)",
+            background: "linear-gradient(135deg, #fff6f6 0%, #d100b6 100%)",
+            border: "none",
+            borderRadius: "50%",
+            width: 60,
+            height: 60,
+            color: "#fff",
+            fontSize: 36,
+            fontWeight: 900,
+            cursor: "pointer",
+            zIndex: 10,
+            boxShadow: "0 4px 16px #d100b655, 0 1.5px 8px #d100b622",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+          }}
+          aria-label="Next image"
+          onMouseOver={e => e.currentTarget.style.transform = "scale(1.12)"}
+          onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}
+        >
+          <span style={{fontSize: 40, fontWeight: 900, lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>&#x203A;</span>
+        </button>
+        {/* Dots */}
+        <div style={{
+          position: "absolute",
+          bottom: 24,
+          left: 0,
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          gap: 24,
+          zIndex: 10,
+        }}>
+          {images.map((_, idx) => (
+            <span
+              key={idx}
+              style={{
+                display: "inline-block",
+                width: 22,
+                height: 22,
+                borderRadius: "50%",
+                background: idx === current ? "#d100b6" : "#fff",
+                border: idx === current ? "4px solid #fff" : "3px solid #d100b6",
+                boxShadow: idx === current ? "0 2px 8px #d100b655" : "0 1px 4px #bbb8",
+                opacity: 1,
+                transition: "background 0.3s, border 0.3s, box-shadow 0.3s",
+                margin: 0,
+              }}
+            />
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
