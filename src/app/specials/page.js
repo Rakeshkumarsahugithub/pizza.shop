@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from 'next/image';
 
 const pizzas = [
   {
@@ -111,10 +112,12 @@ export default function Specials() {
           </div>
           <div style={{ display: "flex", alignItems: "center", margin: "106px 0 0 0", gap: 16 }}>
             {pizzas.map((pizza, idx) => (
-              <img
+              <Image
                 key={pizza.name}
                 src={pizza.img}
                 alt={pizza.name}
+                width={150}
+                height={150}
                 onClick={() => handleSelect(idx)}
                 style={{
                   width: 150,
@@ -129,6 +132,7 @@ export default function Specials() {
                   background: "#fff",
                   opacity: animating ? 0.7 : 1,
                 }}
+                priority={idx === 0}
               />
             ))}
           </div>
@@ -176,12 +180,15 @@ export default function Specials() {
               // Find the index of this pizza in the original array
               const pizzaIdx = pizzas.findIndex(p => p.name === pizza.name);
               return (
-                <img
+                <Image
                   key={pizza.name}
                   src={pizza.img}
                   alt={pizza.name}
+                  width={400}
+                  height={400}
                   style={getPizzaStyle(pos.angle, i === 0)}
                   onClick={() => handleSelect(pizzaIdx)}
+                  priority={i === 0}
                 />
               );
             })}

@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ export default function NavBar() {
         <span style={{ display: 'inline-block', width: 64, height: 64, background: '#fff', borderRadius: '50%', boxShadow: '0 2px 8px #0001', border: '2px solid #ff9800', marginRight: 10, overflow: 'hidden' }}>
           <span style={{ fontSize: 40, display: 'block', textAlign: 'center', lineHeight: '64px' }}>🍕</span>
         </span>
-        <span style={{ fontWeight: 700, fontSize: 28, color: '#b0008b', fontFamily: 'inherit' }}>Rakesh's Pizza Shop</span>
+        <span style={{ fontWeight: 700, fontSize: 28, color: '#b0008b', fontFamily: 'inherit' }}>Rakesh&apos;s Pizza Shop</span>
       </div>
       <div style={{ display: 'flex', gap: 40, alignItems: 'center' }}>
         <Link href="/" prefetch={true} style={{ 
@@ -60,7 +61,7 @@ export default function NavBar() {
       <div>
         {/* WhatsApp profile image */}
         <span style={{ display: 'inline-block', width: 64, height: 74,  marginRight: 32, borderRadius: '50%', background: '#eee', overflow: 'hidden', border: '2px solid #222' }}>
-          <img src="/WhatsApp_Image_2023-08-06_at_10.42.18_AM-removebg-preview_auto_x2.jpg" alt="WhatsApp Profile" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+          <Image src="/WhatsApp_Image_2023-08-06_at_10.42.18_AM-removebg-preview_auto_x2.jpg" alt="WhatsApp Profile" width={64} height={74} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
         </span>
       </div>
     </nav>

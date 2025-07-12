@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import Image from 'next/image';
 
 const images = [
   "https://b.zmtcdn.com/data/pictures/chains/3/18687613/7b4ce7f12a029437bc789052ab310aa0.jpg",
@@ -51,7 +52,7 @@ export default function Home() {
           margin: 0,
           letterSpacing: 1,
         }}>
-          Welcome to Rakesh’s Pizza Shop!
+          Welcome to Rakesh&apos;s Pizza Shop!
         </h1>
         <p style={{
           fontSize: "1.25rem",
@@ -110,9 +111,11 @@ export default function Home() {
             transition: "opacity 0.7s cubic-bezier(.4,0,.2,1)",
             zIndex: idx === current ? 2 : 1,
           }}>
-            <img
+            <Image
               src={img}
               alt={`carousel-img-${idx}`}
+              width={img.startsWith('http') ? 800 : 800}
+              height={img.startsWith('http') ? 400 : 800}
               style={{
                 width: "100%",
                 height: "100%",
@@ -120,6 +123,7 @@ export default function Home() {
                 borderRadius: 32,
                 filter: "brightness(1)",
               }}
+              priority={idx === 0}
             />
             {/* Overlay for contrast */}
             {/* <div style={{

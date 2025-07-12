@@ -51,13 +51,13 @@ export default function About() {
           </div>
         </div>
         <div style={{ color: '#b0008b', fontWeight: 700, fontSize: 32, marginBottom: 16 }}>
-          Welcome to Rakesh’s Pizza Shop
+          Welcome to Rakesh&apos;s Pizza Shop
         </div>
         <div style={{ maxWidth: 700, margin: '0 auto', fontSize: 20, color: '#222', textAlign: 'left' }}>
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontWeight: 600, fontSize: 26, color: '#d100b6' }}>Our Story</div>
             <div>
-              Rakesh’s pizza shop started with a love for fresh, high-quality ingredients and a passion for making a positive impact on the world. Founded by a team of dedicated food enthusiasts, we set out to challenge the idea that vegetarian pizza is bland or boring. By focusing on vibrant vegetables, unique flavors, and creative recipes, we aim to elevate the vegetarian pizza experience and prove that you don't have to sacrifice taste for ethics.
+              Rakesh&apos;s pizza shop started with a love for fresh, high-quality ingredients and a passion for making a positive impact on the world. Founded by a team of dedicated food enthusiasts, we set out to challenge the idea that vegetarian pizza is bland or boring. By focusing on vibrant vegetables, unique flavors, and creative recipes, we aim to elevate the vegetarian pizza experience and prove that you don&apos;t have to sacrifice taste for ethics.
             </div>
           </div>
           <div style={{ marginBottom: 24 }}>
@@ -69,14 +69,14 @@ export default function About() {
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontWeight: 600, fontSize: 26, color: '#d100b6' }}>Our Values</div>
             <div>
-              At Rakesh’s pizza shop, sustainability and community are at the heart of everything we do. We’re committed to reducing our environmental footprint, supporting local farmers, and giving back to the community. Every pizza purchase helps support various initiatives aimed at promoting a healthier planet and a more compassionate world.
+              At Rakesh&apos;s pizza shop, sustainability and community are at the heart of everything we do. We&apos;re committed to reducing our environmental footprint, supporting local farmers, and giving back to the community. Every pizza purchase helps support various initiatives aimed at promoting a healthier planet and a more compassionate world.
             </div>
           </div>
           <div style={{ marginBottom: 24 }}>
             <div style={{ fontWeight: 600, fontSize: 26, color: '#d100b6' }}>Join Us on This Journey</div>
             <div>
               We invite you to explore our menu, try our creations, and share your experiences with us. Together, we can enjoy delicious food while making a positive impact.<br />
-              Thank you for being a part of the Rakesh’s pizza shop family. We look forward to serving you!
+              Thank you for being a part of the Rakesh&apos;s pizza shop family. We look forward to serving you!
             </div>
           </div>
         </div>
