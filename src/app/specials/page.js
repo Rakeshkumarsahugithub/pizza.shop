@@ -100,7 +100,7 @@ export default function Specials() {
         {/* Left Content */}
         <div style={{ flex: 1, minWidth: 480, zIndex: 2 }}>
           <div style={{ marginTop: 16, fontWeight: 700, fontSize: 32, color: "#000" }}>
-            Today's Special
+            Today&apos;s Special
           </div>
           <div style={{ fontSize: 20, margin: "8px 0 0 0", maxWidth: 600, color: "#000" }}>
             Pizza is an Italian food created in Italy.
@@ -210,7 +210,7 @@ export default function Specials() {
           fontSize: 24,
         }}
       >
-        It's 100% veg. So good for vegetarian people.
+        It&apos;s 100% veg. So good for vegetarian people.
       </div>
     </div>
   );
