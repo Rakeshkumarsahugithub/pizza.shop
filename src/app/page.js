@@ -26,7 +26,7 @@ export default function Home() {
   }, [current]);
 
   return (
-    <div style={{
+    <div className="mobile-home-container" style={{
       minHeight: "100vh",
       background: "linear-gradient(135deg, #fff6f6 0%, #f3e7ff 100%)",
       margin: 0,
@@ -45,7 +45,7 @@ export default function Home() {
         textAlign: "center",
         zIndex: 20,
       }}>
-        <h1 style={{
+        <h1 className="mobile-home-heading" style={{
           fontSize: "2.5rem",
           fontWeight: 800,
           color: "#d100b6",
@@ -54,7 +54,7 @@ export default function Home() {
         }}>
           Welcome to Rakesh&apos;s Pizza Shop!
         </h1>
-        <p style={{
+        <p className="mobile-home-description" style={{
           fontSize: "1.25rem",
           color: "#333",
           margin: "1rem 0 0 0",
@@ -65,6 +65,7 @@ export default function Home() {
       </div>
       {/* Carousel container */}
       <div
+        className="mobile-carousel-container"
         style={{
           position: "relative",
           width: "100%",
@@ -140,6 +141,7 @@ export default function Home() {
         ))}
         {/* Left Arrow */}
         <button
+          className="mobile-carousel-arrow"
           onClick={prevImage}
           style={{
             position: "absolute",
@@ -170,6 +172,7 @@ export default function Home() {
         </button>
         {/* Right Arrow */}
         <button
+          className="mobile-carousel-arrow"
           onClick={nextImage}
           style={{
             position: "absolute",
@@ -199,7 +202,7 @@ export default function Home() {
           <span style={{fontSize: 40, fontWeight: 900, lineHeight: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>&#x203A;</span>
         </button>
         {/* Dots */}
-        <div style={{
+        <div className="mobile-carousel-dots" style={{
           position: "absolute",
           bottom: 24,
           left: 0,
@@ -212,6 +215,7 @@ export default function Home() {
           {images.map((_, idx) => (
             <span
               key={idx}
+              className="mobile-carousel-dot"
               style={{
                 display: "inline-block",
                 width: 22,

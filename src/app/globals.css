@@ -25,3 +25,243 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* NavBar mobile styles */
+  .mobile-nav {
+    padding: 0 16px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    min-height: 60px !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  
+  .mobile-nav-brand {
+    font-size: 20px !important;
+    gap: 8px !important;
+  }
+  
+  .mobile-nav-logo {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  
+  .mobile-nav-logo span {
+    font-size: 28px !important;
+    line-height: 48px !important;
+  }
+  
+  .mobile-nav-links {
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .mobile-nav-link {
+    font-size: 16px !important;
+    padding: 8px 12px !important;
+  }
+  
+  .mobile-nav-profile {
+    width: 48px !important;
+    height: 56px !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Home page mobile styles */
+  .mobile-home-container {
+    padding: 0 16px !important;
+  }
+  
+  .mobile-home-heading {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .mobile-home-description {
+    font-size: 1rem !important;
+    margin: 0.5rem 0 0 0 !important;
+  }
+  
+  .mobile-carousel-container {
+    height: 40vh !important;
+    min-height: 250px !important;
+    margin: 0 auto 1rem auto !important;
+    border-radius: 20px !important;
+    padding: 1rem !important;
+  }
+  
+  .mobile-carousel-arrow {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 28px !important;
+  }
+  
+  .mobile-carousel-arrow span {
+    font-size: 32px !important;
+  }
+  
+  .mobile-carousel-dots {
+    bottom: 16px !important;
+    gap: 16px !important;
+  }
+  
+  .mobile-carousel-dot {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  
+  /* Specials page mobile styles */
+  .mobile-specials-container {
+    padding: 0 !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+  
+  .mobile-specials-content {
+    display: none !important;
+  }
+  
+  .mobile-specials-mobile-layout {
+    display: flex !important;
+  }
+  
+  .mobile-specials-footer {
+    display: none !important;
+  }
+  
+  .mobile-specials-left {
+    min-width: auto !important;
+    padding: 1rem 0 !important;
+  }
+  
+  .mobile-specials-title {
+    font-size: 24px !important;
+    margin-top: 8px !important;
+  }
+  
+  .mobile-specials-subtitle {
+    font-size: 16px !important;
+    margin: 6px 0 0 0 !important;
+  }
+  
+  .mobile-specials-pizza-name {
+    font-size: 28px !important;
+    margin: 16px 0 0 0 !important;
+  }
+  
+  .mobile-specials-thumbnails {
+    margin: 60px 0 0 0 !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .mobile-specials-thumbnail {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .mobile-specials-circle-container {
+    width: 100% !important;
+    height: 400px !important;
+    bottom: 0 !important;
+    margin-right: 0 !important;
+    position: relative !important;
+  }
+  
+  .mobile-specials-circle {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .mobile-specials-gray-circle {
+    top: 20px !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
+    height: calc(100% - 40px) !important;
+  }
+  
+  .mobile-specials-pizza {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  /* About page mobile styles */
+  .mobile-about-container {
+    padding: 0 16px 2rem 16px !important;
+  }
+  
+  .mobile-about-card {
+    padding: 1.5rem 1rem !important;
+    border-radius: 20px !important;
+  }
+  
+  .mobile-about-title {
+    font-size: 28px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .mobile-about-animation {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .mobile-about-animation svg {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  .mobile-about-tagline {
+    font-size: 16px !important;
+    margin-top: 12px !important;
+  }
+  
+  .mobile-about-subtitle {
+    font-size: 24px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .mobile-about-content {
+    font-size: 16px !important;
+  }
+  
+  .mobile-about-section-title {
+    font-size: 20px !important;
+  }
+  
+  /* Contact page mobile styles */
+  .mobile-contact-container {
+    padding: 1rem 16px !important;
+    min-height: auto !important;
+  }
+  
+  .mobile-contact-card {
+    padding: 1.5rem 1rem !important;
+    border-radius: 20px !important;
+  }
+  
+  .mobile-contact-title {
+    font-size: 24px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .mobile-contact-info {
+    padding: 16px 12px !important;
+  }
+  
+  .mobile-contact-item {
+    margin-bottom: 16px !important;
+  }
+  
+  .mobile-contact-icon {
+    font-size: 24px !important;
+    margin-right: 16px !important;
+  }
+  
+  .mobile-contact-text {
+    font-size: 16px !important;
+  }
+}
